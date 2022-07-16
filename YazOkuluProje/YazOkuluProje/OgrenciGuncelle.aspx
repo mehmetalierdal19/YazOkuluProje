@@ -1,10 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="YazOkuluProje.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="OgrenciGuncelle.aspx.cs" Inherits="YazOkuluProje.OgrenciGuncelle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form id="Form1" runat="server" class="ml-5 mr-5">
         <div class="form-group mt-3">
+            <strong>
+                <asp:Label for="txtId" runat="server" Text="Öğrenci ID:"></asp:Label>
+            </strong>
+            <asp:TextBox ID="txtId" runat="server" class="form-control" placeholder="Öğrenci ID Giriniz"></asp:TextBox>
+        </div>
+        <br />
+        <div class="form-group">
             <strong>
                 <asp:Label for="txtAd" runat="server" Text="Öğrenci Adı:"></asp:Label>
             </strong>
@@ -40,7 +47,7 @@
         </div>
         <br />
         <strong>
-            <asp:Button ID="submit" runat="server" Text="Kaydet" class="btn btn-primary" OnClick="submit_Click" Style="font-weight: bold" />
+            <asp:Button ID="update" runat="server" Text="Güncelle" class="btn btn-success" Style="font-weight: bold" OnClick="update_Click" />
         </strong>
         <br />
         <br />

@@ -28,6 +28,7 @@ namespace DataAccessLayer
 
             return komut1.ExecuteNonQuery();
         }
+
         public static List<EntityOgrenci> OgrenciListesi()
         {
             List<EntityOgrenci> degerler = new List<EntityOgrenci>();
@@ -51,6 +52,58 @@ namespace DataAccessLayer
             }
             dr.Close();
             return degerler;
+        }
+
+        public static bool OgrenciSil(int parametre)
+        {
+            SqlCommand komut3 = new SqlCommand("Delete from TBLOGRENCI where OGRID=@p1", Baglanti.bgl);
+            if (komut3.Connection.State != ConnectionState.Open)
+            {
+                komut3.Connection.Open();
+            }
+            komut3.Parameters.AddWithValue("@p1", parametre);
+            return komut3.ExecuteNonQuery() > 0;
+        }
+
+        public static List<EntityOgrenci> OgrenciDetay(int id)
+        {
+            List<EntityOgrenci> degerler = new List<EntityOgrenci>();
+            SqlCommand komut4 = new SqlCommand("Select * from TBLOGRENCI where OGRID=@p1", Baglanti.bgl);
+            komut4.Parameters.AddWithValue("@p1", id);
+            if (komut4.Connection.State != ConnectionState.Open)
+            {
+                komut4.Connection.Open();
+            }
+            SqlDataReader dr = komut4.ExecuteReader();
+            while (dr.Read())
+            {
+                EntityOgrenci ent = new EntityOgrenci();
+                ent.Ad = dr["OGRAD"].ToString();
+                ent.Soyad = dr["OGRSOYAD"].ToString();
+                ent.Mail = dr["OGRMAIL"].ToString();
+                ent.Numara = dr["OGRNUMARA"].ToString();
+                ent.Sifre = dr["OGRSIFRE"].ToString();
+                ent.Bakiye = Convert.ToDouble(dr["OGRBAKIYE"].ToString());
+                degerler.Add(ent);
+            }
+            dr.Close();
+            return degerler;
+        }
+
+        public static bool OgrenciGuncelle(EntityOgrenci deger)
+        {
+            SqlCommand komut5 = new SqlCommand("update TBLOGRENCI set OGRAD=@ad, OGRSOYAD=@soyad, OGRNUMARA=@numara, OGRMAIL=@mail, OGRSIFRE=@sifre where OGRID=@id", Baglanti.bgl);
+            if(komut5.Connection.State != ConnectionState.Open)
+            {
+                komut5.Connection.Open();
+            }
+            komut5.Parameters.AddWithValue("@ad", deger.Ad);
+            komut5.Parameters.AddWithValue("@soyad", deger.Soyad);
+            komut5.Parameters.AddWithValue("@numara", deger.Numara);
+            komut5.Parameters.AddWithValue("@mail", deger.Mail);
+            komut5.Parameters.AddWithValue("@sifre", deger.Sifre);
+            komut5.Parameters.AddWithValue("@id", deger.OgrId);
+            return komut5.ExecuteNonQuery() > 0;
         }
     }
 }

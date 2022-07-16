@@ -30,7 +30,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="OgrenciListesi.aspx">Öğrenci Listesi</a>
-                        <a class="dropdown-item" href="#">Öğrenci İşlemleri</a>
+                        <a class="dropdown-item" href="WebForm1.aspx">Yeni Kayıt</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dersler</a>
+                    <a class="nav-link" href="Dersler.aspx">Dersler</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Kontenjanlar</a>

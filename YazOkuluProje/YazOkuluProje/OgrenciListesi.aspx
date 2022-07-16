@@ -13,6 +13,7 @@
                 <th scope="col">Öğrenci Email</th>
                 <th scope="col">Öğrenci Şifre</th>
                 <th scope="col">Öğrenci Bakiye</th>
+                <th scope="col">İşlemler</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,10 @@
                         <td><%#Eval("Mail") %></td>
                         <td><%#Eval("Sifre") %></td>
                         <td><%#Eval("Bakiye") %></td>
+                        <td>
+                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciSil.aspx?OgrId=" + Eval("OgrId") %>' ID="HyperLink1" CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
+                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciGuncelle.aspx?OgrId=" + Eval("OgrId") %>' ID="HyperLink2" CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
+                        </td>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
