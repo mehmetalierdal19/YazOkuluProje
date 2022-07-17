@@ -14,7 +14,10 @@ namespace YazOkuluProje
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if (Page.IsPostBack == true)
+            //{
+            //    temizle();
+            //}
         }
         private void temizle()
         {
@@ -28,8 +31,6 @@ namespace YazOkuluProje
         }
         protected void submit_Click(object sender, EventArgs e)
         {
-            try
-            {
                 EntityOgrenci ent = new EntityOgrenci();
                 ent.Ad = txtAd.Text;
                 ent.Soyad = txtSoyad.Text;
@@ -37,17 +38,8 @@ namespace YazOkuluProje
                 ent.Sifre = txtSifre.Text;
                 ent.Mail = txtMail.Text;
                 BLLOgrenci.OgrenciEkleBLL(ent);
-                Label1.Visible = true;
-                Label1.Text = "Kaydetme Başarılı";
                 temizle();
-
-            }
-            catch (Exception)
-            {
-                Label1.Visible = true;
-                Label1.Text = "Kaydetme Başarısız";
-            }
-
+                Response.Redirect("OgrenciListesi.aspx");
         }
     }
 }

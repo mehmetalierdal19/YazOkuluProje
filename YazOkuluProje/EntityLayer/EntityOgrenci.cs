@@ -8,13 +8,13 @@ namespace EntityLayer
 {
     public class EntityOgrenci
     {
-        private string ad;
-        private string soyad;
-        private int ogrid;
-        private string numara;
-        private string mail;
-        private double bakiye;
-        private string sifre;
+        public string ad;
+        public string soyad;
+        public int ogrid;
+        public string numara;
+        public string mail;
+        public double bakiye;
+        public string sifre;
 
         public string Ad { get => ad; set => ad = value; }
         public string Soyad { get => soyad; set => soyad = value; }

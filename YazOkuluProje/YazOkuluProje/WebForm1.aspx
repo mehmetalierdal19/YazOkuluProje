@@ -44,6 +44,5 @@
         </strong>
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
     </form>
 </asp:Content>

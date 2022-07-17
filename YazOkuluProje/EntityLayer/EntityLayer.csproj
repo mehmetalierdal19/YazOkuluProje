@@ -45,6 +45,7 @@
     <Compile Include="EntityDers.cs" />
     <Compile Include="EntityOgrenci.cs" />
     <Compile Include="EntityOgretmen.cs" />
+    <Compile Include="GirisBilgileri.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

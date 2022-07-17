@@ -105,5 +105,34 @@ namespace DataAccessLayer
             komut5.Parameters.AddWithValue("@id", deger.OgrId);
             return komut5.ExecuteNonQuery() > 0;
         }
+
+        public static List<EntityOgrenci> OgrenciGirisBilgi(int no)
+        {
+            List<EntityOgrenci> degerler = new List<EntityOgrenci>();
+            SqlCommand komut = new SqlCommand("Select * from TBLOGRENCI where OGRNUMARA=@p1", Baglanti.bgl);
+            komut.Parameters.AddWithValue("@p1", no);
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                EntityOgrenci ent = new EntityOgrenci();
+                ent.Ad = dr["OGRAD"].ToString();
+                ent.Soyad = dr["OGRSOYAD"].ToString();
+                ent.Mail = dr["OGRMAIL"].ToString();
+                //ent.Numara = dr["OGRNUMARA"].ToString();
+                ent.Numara = no.ToString();
+                GirisBilgileri.No = no.ToString();
+                //ent.Sifre = dr["OGRSIFRE"].ToString();
+                ent.Sifre = dr["OGRSIFRE"].ToString();
+                GirisBilgileri.Pass = ent.sifre;
+                ent.Bakiye = Convert.ToDouble(dr["OGRBAKIYE"].ToString());
+                degerler.Add(ent);
+            }
+            dr.Close();
+            return degerler;
+        }
     }
 }

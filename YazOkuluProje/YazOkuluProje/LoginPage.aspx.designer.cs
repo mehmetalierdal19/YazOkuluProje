@@ -11,70 +11,52 @@ namespace YazOkuluProje
 {
 
 
-    public partial class WebForm1
+    public partial class LoginPage
     {
 
         /// <summary>
-        /// Form1 control.
+        /// floatingInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
+        protected global::System.Web.UI.WebControls.TextBox floatingInput;
 
         /// <summary>
-        /// txtAd control.
+        /// floatingPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAd;
+        protected global::System.Web.UI.WebControls.TextBox floatingPassword;
 
         /// <summary>
-        /// txtSoyad control.
+        /// floatingDrop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoyad;
+        protected global::System.Web.UI.WebControls.DropDownList floatingDrop;
 
         /// <summary>
-        /// txtNumara control.
+        /// btnGiriş control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumara;
+        protected global::System.Web.UI.WebControls.Button btnGiriş;
 
         /// <summary>
-        /// txtMail control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMail;
-
-        /// <summary>
-        /// txtSifre control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSifre;
-
-        /// <summary>
-        /// submit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
