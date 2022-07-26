@@ -120,8 +120,11 @@ namespace DataAccessLayer
             {
                 EntityOgrenci ent = new EntityOgrenci();
                 ent.Ad = dr["OGRAD"].ToString();
+                GirisBilgileri.Ad = ent.Ad;
                 ent.Soyad = dr["OGRSOYAD"].ToString();
+                GirisBilgileri.Soyad = ent.Soyad;
                 ent.Mail = dr["OGRMAIL"].ToString();
+                GirisBilgileri.mail = ent.Mail;
                 //ent.Numara = dr["OGRNUMARA"].ToString();
                 ent.Numara = no.ToString();
                 GirisBilgileri.No = no.ToString();
@@ -129,6 +132,7 @@ namespace DataAccessLayer
                 ent.Sifre = dr["OGRSIFRE"].ToString();
                 GirisBilgileri.Pass = ent.sifre;
                 ent.Bakiye = Convert.ToDouble(dr["OGRBAKIYE"].ToString());
+                GirisBilgileri.bakiye = ent.Bakiye;
                 degerler.Add(ent);
             }
             dr.Close();

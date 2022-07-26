@@ -46,11 +46,12 @@
                         <a class="nav-link" href="#">Kontenjanlar</a>
                     </li>
                 </ul>
-                <asp:Button OnClick="Button1_Click" CssClass="btn btn-outline-danger my-2 my-sm-0" ID="Button1" runat="server" Text="Çıkış Yap"/>
+                <asp:Button OnClick="Button1_Click" CssClass="btn btn-outline-danger my-2 my-sm-0" ID="Button1" runat="server" Text="Çıkış Yap" />
             </div>
         </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
     </form>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -20,6 +20,10 @@ namespace YazOkuluProje
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            GirisBilgileri.Ad = "";
+            GirisBilgileri.Soyad = "";
+            GirisBilgileri.bakiye = 0;
+            GirisBilgileri.mail = "";
             GirisBilgileri.No = "";
             GirisBilgileri.Pass = "";
             Response.Redirect("LoginPage.aspx");

@@ -13,5 +13,6 @@ namespace EntityLayer
         public static double bakiye { get; set; }
         public static string No { get; set; }
         public static string Pass { get; set; }
+        public static string mail { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace YazOkuluProje
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = "Hoşgeldiniz " + GirisBilgileri.No;
+            Label1.Text = "Hoşgeldiniz " + GirisBilgileri.Ad + " " + GirisBilgileri.Soyad;
         }
     }
 }
