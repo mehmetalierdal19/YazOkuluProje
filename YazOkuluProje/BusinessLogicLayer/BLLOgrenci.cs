@@ -86,5 +86,9 @@ namespace BusinessLogicLayer
         {
             return DALOgrenci.BakiyeYukle(bakiye);
         }
+        public static bool OgrenciUcretAzaltBLL(double x)
+        {
+            return DALOgrenci.OgrenciUcretAzalt(x);
+        }
     }
 }

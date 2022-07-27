@@ -14,6 +14,7 @@ namespace EntityLayer
         private int dersid;
         private int kontdurum;
         private double dersbakiye;
+        private string dersdurum;
 
         public string Dersad { get => dersad; set => dersad = value; }
         public int Min { get => min; set => min = value; }
@@ -21,5 +22,6 @@ namespace EntityLayer
         public int DersId { get => dersid; set => dersid = value; }
         public int KontDurum { get => kontdurum; set => kontdurum = value; }
         public double DersBakiye { get => dersbakiye; set => dersbakiye = value; }
+        public string DersDurum { get => dersdurum; set => dersdurum = value; }
     }
 }

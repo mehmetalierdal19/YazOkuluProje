@@ -26,5 +26,9 @@ namespace BusinessLogicLayer
         //    }
         //    return -1;
         //}
+        public static bool DersDurumGuncelleBLL(bool x, int id)
+        {
+            return DALDers.DersDurumGuncelle(x, id);
+        }
     }
 }

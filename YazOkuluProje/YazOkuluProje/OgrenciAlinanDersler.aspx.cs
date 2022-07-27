@@ -10,15 +10,13 @@ using BusinessLogicLayer;
 
 namespace YazOkuluProje
 {
-    public partial class OgrenciBilgileri : System.Web.UI.Page
+    public partial class OgrenciAlinanDersler : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = GirisBilgileri.Ad;
-            Label2.Text = GirisBilgileri.Soyad;
-            Label3.Text = GirisBilgileri.No;
-            Label6.Text = GirisBilgileri.bakiye.ToString() + " " +"TL";
-            Label5.Text = GirisBilgileri.mail;
+            List<EntityBasvuruForm> DrsList = BLLBasvuru.AlinanDersListeleBLL(GirisBilgileri.No);
+            Repeater1.DataSource = DrsList;
+            Repeater1.DataBind();
         }
     }
 }

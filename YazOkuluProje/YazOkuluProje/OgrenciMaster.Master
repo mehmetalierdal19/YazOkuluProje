@@ -34,8 +34,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="OgrenciDersListesi.aspx">Ders Listesi</a>
-                            <a class="dropdown-item" href="#">Alınan Dersler</a>
-                            <a class="dropdown-item" href="#">Yeni Ders Başvurusu</a>
+                            <a class="dropdown-item" href="OgrenciAlinanDersler.aspx">Alınan Dersler</a>
                         </div>
                     </li>
                     <li class="nav-item">

@@ -16,5 +16,9 @@ namespace BusinessLogicLayer
         {
             return DALBasvuru.BasvuruEkle(p);
         }
+        public static List<EntityBasvuruForm> AlinanDersListeleBLL(string no)
+        {
+            return DALBasvuru.AlinanDersListe(no);
+        }
     }
 }

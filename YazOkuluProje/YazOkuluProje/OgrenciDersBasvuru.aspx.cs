@@ -23,25 +23,23 @@ namespace YazOkuluProje
                 txtId.Text = dersList[0].DersId.ToString();
                 txtAd.Text = dersList[0].Dersad.ToString();
                 txtUcret.Text = dersList[0].DersBakiye.ToString();
+                txtDurum.Text = dersList[0].DersDurum.ToString();
             }
         }
 
         protected void update_Click(object sender, EventArgs e)
         {
-            if(txtNumara.Text != GirisBilgileri.No)
+            double ucret = double.Parse(txtUcret.Text);
+            bool arttir = false;
+            if(txtNumara.Text != GirisBilgileri.No || txtNumara.Text == "" || txtNumara.Text == null)
             {
                 Label1.Visible = true;
-                Label1.Text = "Geçersiz Öğrenci Numarası";
+                Label1.Text = "Geçersiz Öğrenci Numarası.";
             }
             else if(int.Parse(txtUcret.Text) > GirisBilgileri.bakiye)
             {
                 Label1.Visible = true;
-                Label1.Text = "Yetersiz Bakiye";
-            }
-            else if(txtNumara.Text == "" || txtNumara.Text == null)
-            {
-                Label1.Visible = true;
-                Label1.Text = "Lütfen Öğrenci Numarası Giriniz";
+                Label1.Text = "Yetersiz Bakiye.";
             }
             else
             {
@@ -49,10 +47,16 @@ namespace YazOkuluProje
                 ent.BasDersAd = txtAd.Text;
                 ent.BasDersId = int.Parse(txtId.Text);
                 ent.BasOgrAd = GirisBilgileri.Ad + " " + GirisBilgileri.Soyad;
+                ent.BasDersDurum = txtDurum.Text;
                 ent.BasOgrNo = txtNumara.Text;
                 BLLBasvuru.BasvuruEkleBLL(ent);
+                BLLOgrenci.OgrenciUcretAzaltBLL(ucret);
+                arttir = true;
+                BLLDers.DersDurumGuncelleBLL(arttir, int.Parse(txtId.Text));
                 Label1.Visible = false;
                 Label1.Text = "";
+                Label2.Visible = true;
+                Label2.Text = "Ders Başvurusu Başarılı Bir Şekilde Yapılmıştır.";
             }
         }
     }

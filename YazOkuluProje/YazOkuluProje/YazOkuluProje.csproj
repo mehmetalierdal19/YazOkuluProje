@@ -70,6 +70,7 @@
     <Content Include="BakiyeYükleme.aspx" />
     <Content Include="Dersler.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="OgrenciAlinanDersler.aspx" />
     <Content Include="OgrenciAnaSayfa.aspx" />
     <Content Include="OgrenciBilgileri.aspx" />
     <Content Include="OgrenciDersBasvuru.aspx" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciAlinanDersler.aspx.cs">
+      <DependentUpon>OgrenciAlinanDersler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciAlinanDersler.aspx.designer.cs">
+      <DependentUpon>OgrenciAlinanDersler.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciAnaSayfa.aspx.cs">
       <DependentUpon>OgrenciAnaSayfa.aspx</DependentUpon>

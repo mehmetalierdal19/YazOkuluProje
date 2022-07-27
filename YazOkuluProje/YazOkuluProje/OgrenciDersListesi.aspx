@@ -11,6 +11,7 @@
                 <th scope="col">Ders Minimum Kontenjan</th>
                 <th scope="col">Ders Maksimum Kontenjan</th>
                 <th scope="col">Ders Kontenjan Durumu</th>
+                <th scope="col">Ders Durumu</th>
                 <th scope="col">Ders Ücreti</th>
                 <th scope="col">İşlemler</th>
             </tr>
@@ -24,7 +25,8 @@
                         <td><%#Eval("Min") %></td>
                         <td><%#Eval("Max") %></td>
                         <td><%#Eval("KontDurum") %></td>
-                        <td><%#Eval("DersBakiye") %></td>
+                        <td><%#Eval("DersDurum") %></td>
+                        <td><%#Eval("DersBakiye") %> TL</td>
                         <td>
                             <asp:HyperLink NavigateUrl='<%# "~/OgrenciDersBasvuru.aspx?DersId=" + Eval("DersId") %>' ID="HyperLink2" CssClass="btn btn-success" runat="server">Başvur</asp:HyperLink>
                         </td>

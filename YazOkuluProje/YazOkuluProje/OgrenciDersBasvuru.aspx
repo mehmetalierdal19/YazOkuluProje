@@ -27,6 +27,13 @@
         <br />
         <div class="form-group">
             <strong>
+                <asp:Label for="txtUcret" runat="server" Text="Ders Durumu:"></asp:Label>
+            </strong>
+            <asp:TextBox ID="txtDurum" runat="server" class="form-control"></asp:TextBox>
+        </div>
+        <br />
+        <div class="form-group">
+            <strong>
                 <asp:Label for="txtNumara" runat="server" Text="Öğrenci Numarası:"></asp:Label>
             </strong>
             <asp:TextBox ID="txtNumara" runat="server" class="form-control" placeholder="Öğrenci Numarası Giriniz"></asp:TextBox>
@@ -38,5 +45,6 @@
         <br />
         <br />
         <asp:Label ID="Label1" runat="server" Visible="False" CssClass="text-danger"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Visible="False" CssClass="text-success"></asp:Label>
     </div>
 </asp:Content>
