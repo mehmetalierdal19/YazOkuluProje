@@ -92,14 +92,13 @@ namespace DataAccessLayer
 
         public static bool OgrenciGuncelle(EntityOgrenci deger)
         {
-            SqlCommand komut5 = new SqlCommand("update TBLOGRENCI set OGRAD=@ad, OGRSOYAD=@soyad, OGRNUMARA=@numara, OGRMAIL=@mail, OGRSIFRE=@sifre where OGRID=@id", Baglanti.bgl);
-            if(komut5.Connection.State != ConnectionState.Open)
+            SqlCommand komut5 = new SqlCommand("update TBLOGRENCI set OGRAD=@ad, OGRSOYAD=@soyad, OGRMAIL=@mail, OGRSIFRE=@sifre where OGRID=@id", Baglanti.bgl);
+            if (komut5.Connection.State != ConnectionState.Open)
             {
                 komut5.Connection.Open();
             }
             komut5.Parameters.AddWithValue("@ad", deger.Ad);
             komut5.Parameters.AddWithValue("@soyad", deger.Soyad);
-            komut5.Parameters.AddWithValue("@numara", deger.Numara);
             komut5.Parameters.AddWithValue("@mail", deger.Mail);
             komut5.Parameters.AddWithValue("@sifre", deger.Sifre);
             komut5.Parameters.AddWithValue("@id", deger.OgrId);
@@ -137,6 +136,29 @@ namespace DataAccessLayer
             }
             dr.Close();
             return degerler;
+        }
+        public static bool BakiyeYukle(double bakiye)
+        {
+            double yenibakiye = 0.0;
+            SqlCommand komut = new SqlCommand("Select * from TBLOGRENCI where OGRNUMARA=@no", Baglanti.bgl);
+            komut.Parameters.AddWithValue("@no", GirisBilgileri.No);
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow satir in dt.Rows)
+            {
+                yenibakiye += double.Parse(satir["OGRBAKIYE"].ToString()) + bakiye;
+            }
+
+            SqlCommand komut2 = new SqlCommand("update TBLOGRENCI set OGRBAKIYE = @bakiye where OGRNUMARA=@no", Baglanti.bgl);
+            komut2.Parameters.AddWithValue("@bakiye", yenibakiye);
+            GirisBilgileri.bakiye = yenibakiye;
+            komut2.Parameters.AddWithValue("@no", GirisBilgileri.No);
+            return komut2.ExecuteNonQuery() > 0;
         }
     }
 }

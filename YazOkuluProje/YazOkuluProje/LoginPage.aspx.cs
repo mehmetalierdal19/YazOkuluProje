@@ -28,6 +28,7 @@ namespace YazOkuluProje
                 }
                 else
                 {
+                    Label1.Visible = true;
                     Label1.Text = "Giriş Başarısız";
                 }
 

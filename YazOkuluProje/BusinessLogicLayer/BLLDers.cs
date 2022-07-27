@@ -14,6 +14,10 @@ namespace BusinessLogicLayer
         {
             return DALDers.DersListesi();
         }
+        public static List<EntityDers> DersDetayleBLL(int p)
+        {
+            return DALDers.DersDetay(p);
+        }
         public static int TalepEkleBLL(EntityBasvuruForm p)
         {
             if(p.BasDersId > 0  && p.BasOgrId > 0)

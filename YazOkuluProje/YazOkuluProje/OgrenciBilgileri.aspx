@@ -39,7 +39,7 @@
                     <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
                 </div>
             </div>
-            <asp:Button ID="btnBakiye" runat="server" Text="Bakiye Yükle" CssClass="btn btn-success mt-2" />
+            <a href="BakiyeYükleme.aspx" class="btn btn-success mt-2">Bakiye Yükle</a>
         </div>
     </div>
 </asp:Content>

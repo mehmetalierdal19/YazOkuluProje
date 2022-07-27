@@ -82,5 +82,9 @@ namespace BusinessLogicLayer
             }
             return DALOgrenci.OgrenciGirisBilgi(-1);
         }
+        public static bool BakiyeYuklemeBLL(double bakiye)
+        {
+            return DALOgrenci.BakiyeYukle(bakiye);
+        }
     }
 }

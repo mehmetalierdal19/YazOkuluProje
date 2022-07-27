@@ -67,10 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BakiyeYükleme.aspx" />
     <Content Include="Dersler.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="OgrenciAnaSayfa.aspx" />
     <Content Include="OgrenciBilgileri.aspx" />
+    <Content Include="OgrenciDersBasvuru.aspx" />
+    <Content Include="OgrenciDersListesi.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciListesi.aspx" />
     <Content Include="OgrenciSil.aspx" />
@@ -78,6 +81,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BakiyeYükleme.aspx.cs">
+      <DependentUpon>BakiyeYükleme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BakiyeYükleme.aspx.designer.cs">
+      <DependentUpon>BakiyeYükleme.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dersler.aspx.cs">
       <DependentUpon>Dersler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,6 +122,20 @@
     </Compile>
     <Compile Include="OgrenciBilgileri.aspx.designer.cs">
       <DependentUpon>OgrenciBilgileri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciDersBasvuru.aspx.cs">
+      <DependentUpon>OgrenciDersBasvuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciDersBasvuru.aspx.designer.cs">
+      <DependentUpon>OgrenciDersBasvuru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciDersListesi.aspx.cs">
+      <DependentUpon>OgrenciDersListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciDersListesi.aspx.designer.cs">
+      <DependentUpon>OgrenciDersListesi.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciGuncelle.aspx.cs">
       <DependentUpon>OgrenciGuncelle.aspx</DependentUpon>

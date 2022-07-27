@@ -27,6 +27,8 @@ namespace DataAccessLayer
                 ent.Dersad = dr["DERSAD"].ToString();
                 ent.Max =Convert.ToInt32( dr["DERSMAKSKONT"].ToString());
                 ent.Min = Convert.ToInt32(dr["DERSMINKONT"].ToString());
+                ent.DersBakiye = Convert.ToDouble(dr["DERSBAKIYE"].ToString());
+                ent.KontDurum = Convert.ToInt32(dr["KONTDURUM"].ToString());
                 degerler.Add(ent);
             }
             dr.Close();
@@ -42,6 +44,30 @@ namespace DataAccessLayer
                 komut.Connection.Open();
             }
             return komut.ExecuteNonQuery();
+        }
+        public static List<EntityDers> DersDetay(int p)
+        {
+            List<EntityDers> degerler = new List<EntityDers>();
+            SqlCommand komut = new SqlCommand("Select * from TBLDERSLER where DERSID=@id", Baglanti.bgl);
+            komut.Parameters.AddWithValue("@id", p);
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                EntityDers ent = new EntityDers();
+                ent.DersId = Convert.ToInt32(dr["DERSID"].ToString());
+                ent.Dersad = dr["DERSAD"].ToString();
+                ent.Max = Convert.ToInt32(dr["DERSMAKSKONT"].ToString());
+                ent.Min = Convert.ToInt32(dr["DERSMINKONT"].ToString());
+                ent.DersBakiye = Convert.ToDouble(dr["DERSBAKIYE"].ToString());
+                ent.KontDurum = Convert.ToInt32(dr["KONTDURUM"].ToString());
+                degerler.Add(ent);
+            }
+            dr.Close();
+            return degerler;
         }
     }
 }

@@ -30,17 +30,13 @@
                         <a class="nav-link" href="OgrenciBilgileri.aspx">Öğrenci Bilgileri</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Öğretmenler
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dersler
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="OgrenciDersListesi.aspx">Ders Listesi</a>
+                            <a class="dropdown-item" href="#">Alınan Dersler</a>
+                            <a class="dropdown-item" href="#">Yeni Ders Başvurusu</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Dersler.aspx">Dersler</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kontenjanlar</a>

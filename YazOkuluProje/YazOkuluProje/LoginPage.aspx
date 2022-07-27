@@ -23,10 +23,9 @@
                             </div>
                             <div class="form-floating mb-3">
                                 <%--<input type="password" class="form-control" id="floatingPassword" placeholder="Password">--%>
-                                <asp:TextBox ID="floatingPassword" runat="server" CssClass="form-control" ></asp:TextBox>
+                                <asp:TextBox ID="floatingPassword" runat="server" CssClass="form-control" TextMode="Password" ></asp:TextBox>
                                 <label for="floatingPassword">Şifre</label>
                             </div>
-
                             <div class="form-floating mb-5">
                                 <asp:DropDownList id="floatingDrop" runat="server"  CssClass="form-control w-100">
                                     <asp:ListItem Value="1">Öğrenci Girişi</asp:ListItem>
@@ -39,7 +38,7 @@
                                 <%--<button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit"></button>--%>
                                 <asp:Button ID="btnGiriş" runat="server" CssClass="btn btn-primary btn-login text-uppercase fw-bold" Text="Giriş Yap" OnClick="btnGiriş_Click"/>
                             </div>
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" CssClass="text-danger" Visible="False"></asp:Label>
                         </form>
                     </div>
                 </div>
