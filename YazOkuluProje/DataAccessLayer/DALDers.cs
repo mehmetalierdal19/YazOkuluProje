@@ -37,7 +37,7 @@ namespace DataAccessLayer
         public static int TalepEkle(EntityBasvuruForm p)
         {
             SqlCommand komut = new SqlCommand("Insert into TBLBASVURUFORM (OGRENCIID, DERSID) values (@oid, @did)", Baglanti.bgl);
-            komut.Parameters.AddWithValue("@oid", p.BasOgrId);
+            komut.Parameters.AddWithValue("@oid", p.BasOgrNo);
             komut.Parameters.AddWithValue("@did", p.BasDersId);
             if(komut.Connection.State != ConnectionState.Open)
             {

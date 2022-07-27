@@ -38,9 +38,21 @@ namespace YazOkuluProje
                 Label1.Visible = true;
                 Label1.Text = "Yetersiz Bakiye";
             }
+            else if(txtNumara.Text == "" || txtNumara.Text == null)
+            {
+                Label1.Visible = true;
+                Label1.Text = "Lütfen Öğrenci Numarası Giriniz";
+            }
             else
             {
-
+                EntityBasvuruForm ent = new EntityBasvuruForm();
+                ent.BasDersAd = txtAd.Text;
+                ent.BasDersId = int.Parse(txtId.Text);
+                ent.BasOgrAd = GirisBilgileri.Ad + " " + GirisBilgileri.Soyad;
+                ent.BasOgrNo = txtNumara.Text;
+                BLLBasvuru.BasvuruEkleBLL(ent);
+                Label1.Visible = false;
+                Label1.Text = "";
             }
         }
     }

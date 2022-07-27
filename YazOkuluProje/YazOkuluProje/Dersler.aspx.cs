@@ -27,9 +27,9 @@ namespace YazOkuluProje
         protected void Button1_Click(object sender, EventArgs e)
         {
             EntityBasvuruForm ent = new EntityBasvuruForm();
-            ent.BasOgrId = Convert.ToInt32(TextBox1.Text);
+            //ent.BasOgrNo = Convert.ToInt32(TextBox1.Text);
             ent.BasDersId = Convert.ToInt32(DropDownList1.SelectedValue.ToString());
-            BLLDers.TalepEkleBLL(ent);
+           // BLLDers.TalepEkleBLL(ent);
         }
     }
 }

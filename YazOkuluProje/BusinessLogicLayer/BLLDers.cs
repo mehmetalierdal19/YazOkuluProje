@@ -18,13 +18,13 @@ namespace BusinessLogicLayer
         {
             return DALDers.DersDetay(p);
         }
-        public static int TalepEkleBLL(EntityBasvuruForm p)
-        {
-            if(p.BasDersId > 0  && p.BasOgrId > 0)
-            {
-                return DALDers.TalepEkle(p);
-            }
-            return -1;
-        }
+        //public static int TalepEkleBLL(EntityBasvuruForm p)
+        //{
+        //    if(p.BasDersId > 0  && p.BasOgrId > 0)
+        //    {
+        //        return DALDers.TalepEkle(p);
+        //    }
+        //    return -1;
+        //}
     }
 }
