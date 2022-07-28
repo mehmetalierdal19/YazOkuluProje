@@ -13,7 +13,7 @@ namespace DataAccessLayer
     {
         public static int BasvuruEkle(EntityBasvuruForm p)
         {
-            SqlCommand komut = new SqlCommand("Insert into TBLBASVURUFORM (OGRAD, OGRNUMARA, DERSAD, DERSID, DERSDURUM) values (@ad, @no, @dersad, @dersid, @durum)", Baglanti.bgl);
+            SqlCommand komut = new SqlCommand("Insert into TBLBASVURUFORM (OGRAD, OGRNUMARA, DERSAD, DERSID, DERSDURUM, DERSUCRET) values (@ad, @no, @dersad, @dersid, @durum, @ucret)", Baglanti.bgl);
 
             if (komut.Connection.State != ConnectionState.Open)
             {
@@ -25,6 +25,7 @@ namespace DataAccessLayer
             komut.Parameters.AddWithValue("@dersad", p.BasDersAd);
             komut.Parameters.AddWithValue("@dersid", p.BasDersId);
             komut.Parameters.AddWithValue("@durum", p.BasDersDurum);
+            komut.Parameters.AddWithValue("@ucret", p.BasDersUcret);
 
             return komut.ExecuteNonQuery();
         }
@@ -47,10 +48,18 @@ namespace DataAccessLayer
                 ent.BasDersId = Convert.ToInt32(dr["DERSID"].ToString());
                 ent.BasOgrAd = dr["OGRAD"].ToString();
                 ent.BasOgrNo = dr["OGRNUMARA"].ToString();
+                ent.BasDersUcret = Convert.ToDouble(dr["DERSUCRET"].ToString());
                 degerler.Add(ent);
             }
             dr.Close();
             return degerler;
+        }
+        public static int BasvuruSil(int id)
+        {
+            SqlCommand komut = new SqlCommand("Delete from TBLBASVURUFORM where BASVURUID=@id", Baglanti.bgl);
+            komut.Parameters.AddWithValue("@id", id);
+
+            return komut.ExecuteNonQuery();
         }
     }
 }

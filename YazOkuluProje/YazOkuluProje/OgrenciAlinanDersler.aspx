@@ -12,6 +12,7 @@
                 <th scope="col">Ders ID</th>
                 <th scope="col">Ders Ad</th>
                 <th scope="col">Ders Durumu</th>
+                <th scope="col">Ders Ücreti</th>
                 <th scope="col">İşlemler</th>
             </tr>
         </thead>
@@ -25,8 +26,9 @@
                         <td scope="row"><%#Eval("BasDersId") %></td>
                         <td><%#Eval("BasDersAd") %></td>
                         <td><%#Eval("BasDersDurum") %></td>
+                        <td><%#Eval("BasDersUcret") %></td>
                         <td>
-                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciDersBasvuru.aspx?BasvuruId=" + Eval("BasvuruId") %>' ID="HyperLink2" CssClass="btn btn-danger" runat="server">Başvuru Sil</asp:HyperLink>
+                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciDersSil.aspx?BasvuruId=" + Eval("BasvuruId") + "&BasDersId=" + Eval("BasDersId") + "&BasDersUcret=" + Eval("BasDersUcret") %>' ID="HyperLink2" CssClass="btn btn-danger" runat="server">Başvuru Sil</asp:HyperLink>
                         </td>
                     </tr>
                 </ItemTemplate>

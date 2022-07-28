@@ -30,7 +30,8 @@ namespace YazOkuluProje
         protected void update_Click(object sender, EventArgs e)
         {
             double ucret = double.Parse(txtUcret.Text);
-            bool arttir = false;
+            bool ucretazalt;
+            bool arttir;
             if(txtNumara.Text != GirisBilgileri.No || txtNumara.Text == "" || txtNumara.Text == null)
             {
                 Label1.Visible = true;
@@ -49,8 +50,10 @@ namespace YazOkuluProje
                 ent.BasOgrAd = GirisBilgileri.Ad + " " + GirisBilgileri.Soyad;
                 ent.BasDersDurum = txtDurum.Text;
                 ent.BasOgrNo = txtNumara.Text;
+                ent.BasDersUcret = double.Parse(txtUcret.Text);
                 BLLBasvuru.BasvuruEkleBLL(ent);
-                BLLOgrenci.OgrenciUcretAzaltBLL(ucret);
+                ucretazalt = true;
+                BLLOgrenci.OgrenciUcretAzaltBLL(ucret, ucretazalt);
                 arttir = true;
                 BLLDers.DersDurumGuncelleBLL(arttir, int.Parse(txtId.Text));
                 Label1.Visible = false;

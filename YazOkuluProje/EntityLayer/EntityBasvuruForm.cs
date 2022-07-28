@@ -14,6 +14,7 @@ namespace EntityLayer
         private string basograd;
         private string basogrno;
         private string basdersdurum;
+        private double basdersucret;
 
         public int BasvuruId { get => basvuruid; set => basvuruid = value; }
         public int BasDersId { get => basdersid; set => basdersid = value; }
@@ -21,5 +22,6 @@ namespace EntityLayer
         public string BasOgrAd { get => basograd; set => basograd = value; }
         public string BasOgrNo { get => basogrno; set => basogrno = value; }
         public string BasDersDurum { get => basdersdurum; set => basdersdurum = value; }
+        public double BasDersUcret { get => basdersucret; set => basdersucret = value; }
     }
 }

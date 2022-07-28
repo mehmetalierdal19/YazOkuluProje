@@ -37,9 +37,6 @@
                             <a class="dropdown-item" href="OgrenciAlinanDersler.aspx">Alınan Dersler</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kontenjanlar</a>
-                    </li>
                 </ul>
                 <asp:Button OnClick="Button1_Click" CssClass="btn btn-outline-danger my-2 my-sm-0" ID="Button1" runat="server" Text="Çıkış Yap" />
             </div>

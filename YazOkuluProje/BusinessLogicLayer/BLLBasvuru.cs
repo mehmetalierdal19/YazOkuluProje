@@ -20,5 +20,9 @@ namespace BusinessLogicLayer
         {
             return DALBasvuru.AlinanDersListe(no);
         }
+        public static int BasvuruSilBLL(int id)
+        {
+            return DALBasvuru.BasvuruSil(id);
+        }
     }
 }

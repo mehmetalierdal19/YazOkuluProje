@@ -75,6 +75,7 @@
     <Content Include="OgrenciBilgileri.aspx" />
     <Content Include="OgrenciDersBasvuru.aspx" />
     <Content Include="OgrenciDersListesi.aspx" />
+    <Content Include="OgrenciDersSil.aspx" />
     <Content Include="OgrenciGuncelle.aspx" />
     <Content Include="OgrenciListesi.aspx" />
     <Content Include="OgrenciSil.aspx" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="OgrenciDersListesi.aspx.designer.cs">
       <DependentUpon>OgrenciDersListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgrenciDersSil.aspx.cs">
+      <DependentUpon>OgrenciDersSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgrenciDersSil.aspx.designer.cs">
+      <DependentUpon>OgrenciDersSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciGuncelle.aspx.cs">
       <DependentUpon>OgrenciGuncelle.aspx</DependentUpon>

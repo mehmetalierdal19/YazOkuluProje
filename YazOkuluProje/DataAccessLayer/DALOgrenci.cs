@@ -160,9 +160,17 @@ namespace DataAccessLayer
             komut2.Parameters.AddWithValue("@no", GirisBilgileri.No);
             return komut2.ExecuteNonQuery() > 0;
         }
-        public static bool OgrenciUcretAzalt(double ucret)
+        public static bool OgrenciUcretAzalt(double ucret, bool x)
         {
-            double yenibakiye = GirisBilgileri.bakiye - ucret;
+            double yenibakiye;
+            if(x == true)
+            {
+                yenibakiye = GirisBilgileri.bakiye - ucret;
+            }
+            else
+            {
+                yenibakiye = GirisBilgileri.bakiye + ucret;
+            }
             SqlCommand komut = new SqlCommand("Update TBLOGRENCI set OGRBAKIYE=@bakiye where OGRNUMARA=@no", Baglanti.bgl);
             komut.Parameters.AddWithValue("@bakiye", yenibakiye);
             GirisBilgileri.bakiye = yenibakiye;
