@@ -24,7 +24,7 @@ namespace YazOkuluProje
                 if(floatingInput.Text == "" || floatingPassword.Text == "")
                 {
                     Label1.Visible = true;
-                    Label1.Text = "Lütfen Gerekli Alnları Doldurunuz.";
+                    Label1.Text = "Lütfen Gerekli Alanları Doldurunuz.";
                 }
                 else
                 {
@@ -41,6 +41,28 @@ namespace YazOkuluProje
                 }
                 
 
+            }
+            else if(floatingDrop.SelectedValue == "2")
+            {
+                if(floatingInput.Text == "" || floatingPassword.Text == "")
+                {
+                    Label1.Visible = true;
+                    Label1.Text = "Lütfen Gerekli Alanları Doldurunuz";
+
+                }
+                else
+                {
+                    BLLOgretmen.OgretmenBilgiBLL(Convert.ToInt32(floatingInput.Text), floatingPassword.Text);
+                    if(OgrtGirisBilgileri.ogrtno != null && OgrtGirisBilgileri.ogrtsifre != null && OgrtGirisBilgileri.ogrtno != "" && OgrtGirisBilgileri.ogrtsifre != "")
+                    {
+                        Response.Redirect("OgretmenAnaSayfa.aspx");
+                    }
+                    else
+                    {
+                        Label1.Visible = true;
+                        Label1.Text = "Giriş Başarısız";
+                    }
+                }
             }
         }
     }

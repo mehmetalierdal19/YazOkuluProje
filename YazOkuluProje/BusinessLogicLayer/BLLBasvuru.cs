@@ -14,7 +14,31 @@ namespace BusinessLogicLayer
     {
         public static int BasvuruEkleBLL(EntityBasvuruForm p)
         {
-            return DALBasvuru.BasvuruEkle(p);
+            SqlCommand komut = new SqlCommand("Select * from TBLBASVURUFORM", Baglanti.bgl);
+
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow satir in dt.Rows)
+            {
+                if (GirisBilgileri.No == satir["OGRNUMARA"].ToString() && p.BasDersId == int.Parse( satir["DERSID"].ToString()))
+                {
+                    GirisBilgileri.BuDegerVarMi = true;
+                }
+            }
+
+            if(GirisBilgileri.BuDegerVarMi == false)
+            {
+                return DALBasvuru.BasvuruEkle(p);
+            }
+
+            return -1;
+            
         }
         public static List<EntityBasvuruForm> AlinanDersListeleBLL(string no)
         {

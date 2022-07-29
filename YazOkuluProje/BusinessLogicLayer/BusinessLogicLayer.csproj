@@ -44,6 +44,7 @@
     <Compile Include="BLLBasvuru.cs" />
     <Compile Include="BLLDers.cs" />
     <Compile Include="BLLOgrenci.cs" />
+    <Compile Include="BLLOgretmen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

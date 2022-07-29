@@ -124,10 +124,8 @@ namespace DataAccessLayer
                 GirisBilgileri.Soyad = ent.Soyad;
                 ent.Mail = dr["OGRMAIL"].ToString();
                 GirisBilgileri.mail = ent.Mail;
-                //ent.Numara = dr["OGRNUMARA"].ToString();
                 ent.Numara = no.ToString();
                 GirisBilgileri.No = no.ToString();
-                //ent.Sifre = dr["OGRSIFRE"].ToString();
                 ent.Sifre = dr["OGRSIFRE"].ToString();
                 GirisBilgileri.Pass = ent.sifre;
                 ent.Bakiye = Convert.ToDouble(dr["OGRBAKIYE"].ToString());

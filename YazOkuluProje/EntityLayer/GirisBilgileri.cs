@@ -14,5 +14,6 @@ namespace EntityLayer
         public static string No { get; set; }
         public static string Pass { get; set; }
         public static string mail { get; set; }
+        public static bool BuDegerVarMi { get; set; }
     }
 }

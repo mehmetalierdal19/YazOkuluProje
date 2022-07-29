@@ -12,6 +12,7 @@ namespace YazOkuluProje
 {
     public partial class OgrenciDersBasvuru : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Request.QueryString["DersId"].ToString());
@@ -51,15 +52,25 @@ namespace YazOkuluProje
                 ent.BasDersDurum = txtDurum.Text;
                 ent.BasOgrNo = txtNumara.Text;
                 ent.BasDersUcret = double.Parse(txtUcret.Text);
+                GirisBilgileri.BuDegerVarMi = false;
                 BLLBasvuru.BasvuruEkleBLL(ent);
-                ucretazalt = true;
-                BLLOgrenci.OgrenciUcretAzaltBLL(ucret, ucretazalt);
-                arttir = true;
-                BLLDers.DersDurumGuncelleBLL(arttir, int.Parse(txtId.Text));
-                Label1.Visible = false;
-                Label1.Text = "";
-                Label2.Visible = true;
-                Label2.Text = "Ders Başvurusu Başarılı Bir Şekilde Yapılmıştır.";
+                if(GirisBilgileri.BuDegerVarMi == true)
+                {
+                    Label1.Visible = true;
+                    Label1.Text = "Bu Derse Zaten Kayıtlısınız.";
+                }
+                else
+                {
+                    ucretazalt = true;
+                    BLLOgrenci.OgrenciUcretAzaltBLL(ucret, ucretazalt);
+                    arttir = true;
+                    BLLDers.DersDurumGuncelleBLL(arttir, int.Parse(txtId.Text));
+                    Label1.Visible = false;
+                    Label1.Text = "";
+                    Label2.Visible = true;
+                    Label2.Text = "Ders Başvurusu Başarılı Bir Şekilde Yapılmıştır.";
+                }
+                
             }
         }
     }
