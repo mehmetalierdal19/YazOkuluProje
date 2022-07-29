@@ -21,16 +21,25 @@ namespace YazOkuluProje
         {
             if (floatingDrop.SelectedValue == "1")
             {
-                BLLOgrenci.OgrenciBilgiBLL(Convert.ToInt32(floatingInput.Text), floatingPassword.Text);
-                if (GirisBilgileri.No != null && GirisBilgileri.Pass != null)
+                if(floatingInput.Text == "" || floatingPassword.Text == "")
                 {
-                    Response.Redirect("OgrenciAnaSayfa.aspx");
+                    Label1.Visible = true;
+                    Label1.Text = "Lütfen Gerekli Alnları Doldurunuz.";
                 }
                 else
                 {
-                    Label1.Visible = true;
-                    Label1.Text = "Giriş Başarısız";
+                    BLLOgrenci.OgrenciBilgiBLL(Convert.ToInt32(floatingInput.Text), floatingPassword.Text);
+                    if (GirisBilgileri.No != null && GirisBilgileri.Pass != null && GirisBilgileri.No != "" && GirisBilgileri.Pass != "")
+                    {
+                        Response.Redirect("OgrenciAnaSayfa.aspx");
+                    }
+                    else
+                    {
+                        Label1.Visible = true;
+                        Label1.Text = "Giriş Başarısız";
+                    }
                 }
+                
 
             }
         }
