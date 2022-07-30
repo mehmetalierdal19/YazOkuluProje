@@ -19,7 +19,7 @@
                             <div class="form-floating mb-3">
                                <%-- <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">--%>
                                 <asp:TextBox ID="floatingInput" runat="server" CssClass="form-control"></asp:TextBox>
-                                <label for="floatingInput">Eposta Adresi</label>
+                                <label for="floatingInput">Öğrenci Veya Öğretmen Numarası</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <%--<input type="password" class="form-control" id="floatingPassword" placeholder="Password">--%>

@@ -28,5 +28,9 @@ namespace BusinessLogicLayer
             }
             return DALOgretmen.OgretmenGirisBilgi(-1);
         }
+        public static bool SifreDegisBLL(string sifre)
+        {
+            return DALOgretmen.SifreDegis(sifre);
+        }
     }
 }

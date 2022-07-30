@@ -40,6 +40,8 @@
                 </div>
             </div>
             <a href="BakiyeYükleme.aspx" class="btn btn-success mt-2">Bakiye Yükle</a>
+            <hr />
+            <a href="YeniSifre.aspx" class="btn btn-primary mt-2">Yeni Şifre</a>
         </div>
     </div>
 </asp:Content>

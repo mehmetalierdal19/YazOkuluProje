@@ -41,5 +41,30 @@ namespace DataAccessLayer
             dr.Close();
             return degerler;
         }
+        public static bool SifreDegis(string pass)
+        {
+            if(GirisBilgileri.Pass != null && GirisBilgileri.Pass != "")
+            {
+                SqlCommand komut = new SqlCommand("Update TBLOGRENCI set OGRSIFRE=@sifre where OGRNUMARA=@no", Baglanti.bgl);
+                komut.Parameters.AddWithValue("@sifre", pass);
+                GirisBilgileri.Pass = pass;
+                komut.Parameters.AddWithValue("@no", GirisBilgileri.No);
+
+                return komut.ExecuteNonQuery() > 0;
+            }
+            else if(OgrtGirisBilgileri.ogrtsifre != null && OgrtGirisBilgileri.ogrtsifre != "")
+            {
+                SqlCommand komut2 = new SqlCommand("Update TBLOGRETMEN set OGRTSIFRE =@sifre where OGRTNUMARA=@no", Baglanti.bgl);
+                komut2.Parameters.AddWithValue("@sifre", pass);
+                OgrtGirisBilgileri.ogrtsifre = pass;
+                komut2.Parameters.AddWithValue("@no", OgrtGirisBilgileri.ogrtno);
+
+                return komut2.ExecuteNonQuery() > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

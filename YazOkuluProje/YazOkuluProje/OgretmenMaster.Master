@@ -27,7 +27,7 @@
                         <a class="nav-link" href="OgretmenAnaSayfa.aspx">Ana Sayfa</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Öğretmen Bilgileri</a>
+                        <a class="nav-link" href="OgretmenBilgileri.aspx">Öğretmen Bilgileri</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dersler
