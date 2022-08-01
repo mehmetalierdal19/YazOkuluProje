@@ -48,5 +48,9 @@ namespace BusinessLogicLayer
         {
             return DALBasvuru.BasvuruSil(id);
         }
+        public static List<EntityBasvuruForm> BasvuruListeleBLL(int id)
+        {
+            return DALBasvuru.BasvuruListele(id);
+        }
     }
 }

@@ -34,7 +34,7 @@
                                 </asp:DropDownList>
                                 <label for="floatingDrop">Seçiniz</label>
                             </div>
-                            <div class="d-grid">
+                            <div class="d-grid mb-3">
                                 <%--<button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit"></button>--%>
                                 <asp:Button ID="btnGiriş" runat="server" CssClass="btn btn-primary btn-login text-uppercase fw-bold" Text="Giriş Yap" OnClick="btnGiriş_Click"/>
                             </div>

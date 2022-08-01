@@ -93,5 +93,28 @@ namespace DataAccessLayer
                 return false;
             }
         }
+        public static bool DurumGuncelle(bool x)
+        {
+            if(x == true)
+            {
+                SqlCommand komut = new SqlCommand("Update TBLDERSLER set DURUM=@durum where DERSID=@id", Baglanti.bgl);
+                komut.Parameters.AddWithValue("@durum", SqlDbType.NVarChar).Value = "Aktif";
+                komut.Parameters.AddWithValue("@id", OgrtGirisBilgileri.ogrtdersid);
+
+                return komut.ExecuteNonQuery() > 0;
+            }
+            else if(x == false)
+            {
+                SqlCommand komut2 = new SqlCommand("update TBLDERSLER set DURUM=@durum where DERSID=@id", Baglanti.bgl);
+                komut2.Parameters.AddWithValue("@durum", SqlDbType.NVarChar).Value = "Pasif";
+                komut2.Parameters.AddWithValue("@id", OgrtGirisBilgileri.ogrtdersid);
+
+                return komut2.ExecuteNonQuery() > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

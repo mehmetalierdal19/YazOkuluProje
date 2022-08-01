@@ -29,13 +29,9 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="OgretmenBilgileri.aspx">Öğretmen Bilgileri</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dersler
+                    <li class="nav-item">
+                        <a class="nav-link" href="OgretmenDersler.aspx">Dersler
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="OgrenciDersListesi.aspx">Ders Listesi</a>
-                            <a class="dropdown-item" href="OgrenciAlinanDersler.aspx">Alınan Dersler</a>
-                        </div>
                     </li>
                 </ul>
                 <asp:Button CssClass="btn btn-outline-danger my-2 my-sm-0" ID="Button1" runat="server" Text="Çıkış Yap" OnClick="Button1_Click1" />

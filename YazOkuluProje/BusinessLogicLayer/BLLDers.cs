@@ -30,5 +30,9 @@ namespace BusinessLogicLayer
         {
             return DALDers.DersDurumGuncelle(x, id);
         }
+        public static bool DurumGuncelle(bool x)
+        {
+            return DALDers.DurumGuncelle(x);
+        }
     }
 }

@@ -61,5 +61,30 @@ namespace DataAccessLayer
 
             return komut.ExecuteNonQuery();
         }
+        public static List<EntityBasvuruForm> BasvuruListele(int id)
+        {
+            List<EntityBasvuruForm> degerler = new List<EntityBasvuruForm>();
+            SqlCommand komut = new SqlCommand("Select * from TBLBASVURUFORM where DERSID=@id", Baglanti.bgl);
+            komut.Parameters.AddWithValue("@id", id);
+            if (komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                EntityBasvuruForm ent = new EntityBasvuruForm();
+                ent.BasvuruId = Convert.ToInt32(dr["BASVURUID"].ToString());
+                ent.BasDersAd = dr["DERSAD"].ToString();
+                ent.BasDersDurum = dr["DERSDURUM"].ToString();
+                ent.BasDersId = Convert.ToInt32(dr["DERSID"].ToString());
+                ent.BasOgrAd = dr["OGRAD"].ToString();
+                ent.BasOgrNo = dr["OGRNUMARA"].ToString();
+                ent.BasDersUcret = Convert.ToDouble(dr["DERSUCRET"].ToString());
+                degerler.Add(ent);
+            }
+            dr.Close();
+            return degerler;
+        }
     }
 }
