@@ -67,9 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminAnaSayfa.aspx" />
+    <Content Include="AdminGirisi.aspx" />
+    <Content Include="AdminOgretmenListesi.aspx" />
     <Content Include="BakiyeYükleme.aspx" />
     <Content Include="DersDurumGuncelle.aspx" />
-    <Content Include="Dersler.aspx" />
+    <Content Include="DersEkle.aspx" />
+    <Content Include="DersGuncelle.aspx" />
+    <Content Include="DersListesi.aspx" />
+    <Content Include="DersSil.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="OgrenciAlinanDersler.aspx" />
     <Content Include="OgrenciAnaSayfa.aspx" />
@@ -84,11 +90,35 @@
     <Content Include="OgretmenBasvuruGoruntule.aspx" />
     <Content Include="OgretmenBilgileri.aspx" />
     <Content Include="OgretmenDersler.aspx" />
+    <Content Include="OgretmenEkle.aspx" />
+    <Content Include="OgretmenGuncelle.aspx" />
+    <Content Include="OgretmenSil.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="YeniSifre.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAnaSayfa.aspx.cs">
+      <DependentUpon>AdminAnaSayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAnaSayfa.aspx.designer.cs">
+      <DependentUpon>AdminAnaSayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminGirisi.aspx.cs">
+      <DependentUpon>AdminGirisi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminGirisi.aspx.designer.cs">
+      <DependentUpon>AdminGirisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOgretmenListesi.aspx.cs">
+      <DependentUpon>AdminOgretmenListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminOgretmenListesi.aspx.designer.cs">
+      <DependentUpon>AdminOgretmenListesi.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BakiyeYükleme.aspx.cs">
       <DependentUpon>BakiyeYükleme.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,12 +133,33 @@
     <Compile Include="DersDurumGuncelle.aspx.designer.cs">
       <DependentUpon>DersDurumGuncelle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dersler.aspx.cs">
-      <DependentUpon>Dersler.aspx</DependentUpon>
+    <Compile Include="DersEkle.aspx.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dersler.aspx.designer.cs">
-      <DependentUpon>Dersler.aspx</DependentUpon>
+    <Compile Include="DersEkle.aspx.designer.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.designer.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersListesi.aspx.cs">
+      <DependentUpon>DersListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersListesi.aspx.designer.cs">
+      <DependentUpon>DersListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersSil.aspx.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersSil.aspx.designer.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
@@ -222,12 +273,33 @@
     <Compile Include="OgretmenDersler.aspx.designer.cs">
       <DependentUpon>OgretmenDersler.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OgretmenEkle.aspx.cs">
+      <DependentUpon>OgretmenEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgretmenEkle.aspx.designer.cs">
+      <DependentUpon>OgretmenEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenGuncelle.aspx.cs">
+      <DependentUpon>OgretmenGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgretmenGuncelle.aspx.designer.cs">
+      <DependentUpon>OgretmenGuncelle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OgretmenMaster.Master.cs">
       <DependentUpon>OgretmenMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="OgretmenMaster.Master.designer.cs">
       <DependentUpon>OgretmenMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenSil.aspx.cs">
+      <DependentUpon>OgretmenSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OgretmenSil.aspx.designer.cs">
+      <DependentUpon>OgretmenSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">

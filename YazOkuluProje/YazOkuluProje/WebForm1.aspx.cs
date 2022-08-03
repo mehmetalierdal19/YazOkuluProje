@@ -14,10 +14,7 @@ namespace YazOkuluProje
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Page.IsPostBack == true)
-            //{
-            //    temizle();
-            //}
+
         }
         private void temizle()
         {
@@ -26,11 +23,18 @@ namespace YazOkuluProje
             txtSoyad.Text = "";
             txtMail.Text = "";
             txtNumara.Text = "";
-            //Label1.Visible = false;
-            //Label1.Text = "";
+            Label1.Visible = false;
+            Label1.Text = "";
         }
         protected void submit_Click(object sender, EventArgs e)
         {
+            if (txtAd.Text == "" || txtAd.Text == null || txtMail.Text == "" || txtMail.Text == null || txtNumara.Text == "" || txtNumara.Text == null || txtSifre.Text == "" || txtSifre.Text == null || txtSoyad.Text == "" || txtSoyad.Text == null)
+            {
+                Label1.Visible = true;
+                Label1.Text = "Lütfen Gerekli Alanları Doldurunuz";
+            }
+            else
+            {
                 EntityOgrenci ent = new EntityOgrenci();
                 ent.Ad = txtAd.Text;
                 ent.Soyad = txtSoyad.Text;
@@ -40,6 +44,7 @@ namespace YazOkuluProje
                 BLLOgrenci.OgrenciEkleBLL(ent);
                 temizle();
                 Response.Redirect("OgrenciListesi.aspx");
+            }
         }
     }
 }

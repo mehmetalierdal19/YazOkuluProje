@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div class="mt-2 mb-3">
+        <a href="WebForm1.aspx" class="btn btn-success ml-2">Öğrenci Ekle</a>
+    </div>
     <table class="table table-hover">
         <thead>
             <tr>
@@ -29,7 +32,7 @@
                         <td><%#Eval("Bakiye") %></td>
                         <td>
                             <asp:HyperLink NavigateUrl='<%# "~/OgrenciSil.aspx?OgrId=" + Eval("OgrId") %>' ID="HyperLink1" CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
-                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciGuncelle.aspx?OgrId=" + Eval("OgrId") %>' ID="HyperLink2" CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
+                            <asp:HyperLink NavigateUrl='<%# "~/OgrenciGuncelle.aspx?OgrId=" + Eval("OgrId") %>' ID="HyperLink2" CssClass="btn btn-primary" runat="server">Güncelle</asp:HyperLink>
                         </td>
                     </tr>
                 </ItemTemplate>

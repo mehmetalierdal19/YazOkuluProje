@@ -35,6 +35,48 @@ namespace DataAccessLayer
             dr.Close();
             return degerler;
         }
+        public static bool DersSil(int parametre)
+        {
+            SqlCommand komut3 = new SqlCommand("Delete from TBLDERSLER where DERSID=@p1", Baglanti.bgl);
+            if (komut3.Connection.State != ConnectionState.Open)
+            {
+                komut3.Connection.Open();
+            }
+            komut3.Parameters.AddWithValue("@p1", parametre);
+            return komut3.ExecuteNonQuery() > 0;
+        }
+        public static bool DersGuncelle(EntityDers deger)
+        {
+            SqlCommand komut5 = new SqlCommand("update TBLDERSLER set DERSAD=@ad, DERSMINKONT=@min, DERSMAKSKONT=@max, DURUM=@durum, DERSBAKIYE=@bakiye where DERSID=@id", Baglanti.bgl);
+            if (komut5.Connection.State != ConnectionState.Open)
+            {
+                komut5.Connection.Open();
+            }
+            komut5.Parameters.AddWithValue("@ad", deger.Dersad);
+            komut5.Parameters.AddWithValue("@min", deger.Min);
+            komut5.Parameters.AddWithValue("@max", deger.Max);
+            komut5.Parameters.AddWithValue("@durum", deger.DersDurum);
+            komut5.Parameters.AddWithValue("@bakiye", deger.DersBakiye);
+            komut5.Parameters.AddWithValue("@id", deger.DersId);
+
+            return komut5.ExecuteNonQuery() > 0;
+        }
+        public static int DersEkle(EntityDers p)
+        {
+            SqlCommand komut = new SqlCommand("insert into TBLDERSLER (DERSAD, DERSMINKONT, DERSMAKSKONT, DERSBAKIYE) values (@ad, @min, @max, @bakiye)", Baglanti.bgl);
+
+            if(komut.Connection.State != ConnectionState.Open)
+            {
+                komut.Connection.Open();
+            }
+
+            komut.Parameters.AddWithValue("@ad", p.Dersad);
+            komut.Parameters.AddWithValue("@min", p.Min);
+            komut.Parameters.AddWithValue("@max", p.Max);
+            komut.Parameters.AddWithValue("@bakiye", p.DersBakiye);
+
+            return komut.ExecuteNonQuery();
+        }
         public static int TalepEkle(EntityBasvuruForm p)
         {
             SqlCommand komut = new SqlCommand("Insert into TBLBASVURUFORM (OGRENCIID, DERSID) values (@oid, @did)", Baglanti.bgl);

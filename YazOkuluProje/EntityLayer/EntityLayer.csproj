@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminGirisBilgileri.cs" />
+    <Compile Include="EntityAdmin.cs" />
     <Compile Include="EntityBasvuruForm.cs" />
     <Compile Include="EntityDers.cs" />
     <Compile Include="EntityOgrenci.cs" />

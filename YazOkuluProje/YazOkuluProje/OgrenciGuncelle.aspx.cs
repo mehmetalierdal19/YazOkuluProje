@@ -12,9 +12,11 @@ namespace YazOkuluProje
 {
     public partial class OgrenciGuncelle : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(Request.QueryString["OgrId"].ToString());
+            int id;
+            id = Convert.ToInt32(Request.QueryString["OgrId"].ToString());
             txtId.Text = id.ToString();
 
             if (Page.IsPostBack == false)
@@ -32,15 +34,17 @@ namespace YazOkuluProje
 
         protected void update_Click(object sender, EventArgs e)
         {
-            EntityOgrenci ent = new EntityOgrenci();
-            ent.Ad = txtAd.Text;
-            ent.Mail = txtMail.Text;
-            ent.Numara = txtNumara.Text;
-            ent.OgrId = Convert.ToInt32(txtId.Text);
-            ent.Sifre = txtSifre.Text;
-            ent.Soyad = txtSoyad.Text;
-            BLLOgrenci.OgrenciGuncelleBLL(ent);
-            Response.Redirect("OgrenciListesi.aspx");
+            
+                EntityOgrenci ent = new EntityOgrenci();
+                ent.Ad = txtAd.Text;
+                ent.Mail = txtMail.Text;
+                ent.Numara = txtNumara.Text;
+                ent.OgrId = Convert.ToInt32(txtId.Text);
+                ent.Sifre = txtSifre.Text;
+                ent.Soyad = txtSoyad.Text;
+                BLLOgrenci.OgrenciGuncelleBLL(ent);
+                Response.Redirect("OgrenciListesi.aspx");
+
         }
     }
 }

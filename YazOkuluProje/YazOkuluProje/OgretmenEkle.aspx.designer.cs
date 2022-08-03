@@ -11,17 +11,8 @@ namespace YazOkuluProje
 {
 
 
-    public partial class OgrenciGuncelle
+    public partial class OgretmenEkle
     {
-
-        /// <summary>
-        /// txtId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
         /// txtAd control.
@@ -33,13 +24,13 @@ namespace YazOkuluProje
         protected global::System.Web.UI.WebControls.TextBox txtAd;
 
         /// <summary>
-        /// txtSoyad control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoyad;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
         /// txtNumara control.
@@ -49,15 +40,6 @@ namespace YazOkuluProje
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumara;
-
-        /// <summary>
-        /// txtMail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMail;
 
         /// <summary>
         /// txtSifre control.

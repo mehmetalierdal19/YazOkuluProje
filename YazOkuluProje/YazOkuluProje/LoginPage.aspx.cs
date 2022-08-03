@@ -21,7 +21,7 @@ namespace YazOkuluProje
         {
             if (floatingDrop.SelectedValue == "1")
             {
-                if(floatingInput.Text == "" || floatingPassword.Text == "")
+                if (floatingInput.Text == "" || floatingPassword.Text == "")
                 {
                     Label1.Visible = true;
                     Label1.Text = "Lütfen Gerekli Alanları Doldurunuz.";
@@ -39,12 +39,12 @@ namespace YazOkuluProje
                         Label1.Text = "Giriş Başarısız";
                     }
                 }
-                
+
 
             }
-            else if(floatingDrop.SelectedValue == "2")
+            else if (floatingDrop.SelectedValue == "2")
             {
-                if(floatingInput.Text == "" || floatingPassword.Text == "")
+                if (floatingInput.Text == "" || floatingPassword.Text == "")
                 {
                     Label1.Visible = true;
                     Label1.Text = "Lütfen Gerekli Alanları Doldurunuz";
@@ -53,7 +53,7 @@ namespace YazOkuluProje
                 else
                 {
                     BLLOgretmen.OgretmenBilgiBLL(Convert.ToInt32(floatingInput.Text), floatingPassword.Text);
-                    if(OgrtGirisBilgileri.ogrtno != null && OgrtGirisBilgileri.ogrtsifre != null && OgrtGirisBilgileri.ogrtno != "" && OgrtGirisBilgileri.ogrtsifre != "")
+                    if (OgrtGirisBilgileri.ogrtno != null && OgrtGirisBilgileri.ogrtsifre != null && OgrtGirisBilgileri.ogrtno != "" && OgrtGirisBilgileri.ogrtsifre != "")
                     {
                         Response.Redirect("OgretmenAnaSayfa.aspx");
                     }
