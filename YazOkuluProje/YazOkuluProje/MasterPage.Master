@@ -36,7 +36,7 @@
                         <a class="nav-link" href="DersListesi.aspx">Dersler</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Adminler</a>
+                        <a class="nav-link" href="AdminListesi.aspx">Adminler</a>
                     </li>
                 </ul>
                 <asp:Button CssClass="btn btn-danger" ID="Button2" runat="server" OnClick="Button2_Click" Text="Çıkış Yap" />

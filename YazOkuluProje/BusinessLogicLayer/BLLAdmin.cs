@@ -56,5 +56,21 @@ namespace BusinessLogicLayer
             }
             return DALAdmin.AdminGiris("");
         }
+        public static List<EntityAdmin> AdminListeleBLL()
+        {
+            return DALAdmin.AdminListele();
+        }
+        public static bool AdminGuncelle(EntityAdmin p)
+        {
+            return DALAdmin.AdminGuncelle(p);
+        }
+        public static bool AdminSil(int id)
+        {
+            return DALAdmin.AdminSil(id);
+        }
+        public static List<EntityAdmin> AdminDetayBLL(string kadi)
+        {
+            return DALAdmin.AdminDetay(kadi);
+        }
     }
 }

@@ -68,8 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminAnaSayfa.aspx" />
+    <Content Include="AdminEkle.aspx" />
     <Content Include="AdminGirisi.aspx" />
+    <Content Include="AdminGuncelle.aspx" />
+    <Content Include="AdminListesi.aspx" />
     <Content Include="AdminOgretmenListesi.aspx" />
+    <Content Include="AdminSil.aspx" />
     <Content Include="BakiyeYükleme.aspx" />
     <Content Include="DersDurumGuncelle.aspx" />
     <Content Include="DersEkle.aspx" />
@@ -105,6 +109,13 @@
     <Compile Include="AdminAnaSayfa.aspx.designer.cs">
       <DependentUpon>AdminAnaSayfa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminEkle.aspx.cs">
+      <DependentUpon>AdminEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEkle.aspx.designer.cs">
+      <DependentUpon>AdminEkle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminGirisi.aspx.cs">
       <DependentUpon>AdminGirisi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,12 +123,33 @@
     <Compile Include="AdminGirisi.aspx.designer.cs">
       <DependentUpon>AdminGirisi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminGuncelle.aspx.cs">
+      <DependentUpon>AdminGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminGuncelle.aspx.designer.cs">
+      <DependentUpon>AdminGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminListesi.aspx.cs">
+      <DependentUpon>AdminListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminListesi.aspx.designer.cs">
+      <DependentUpon>AdminListesi.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminOgretmenListesi.aspx.cs">
       <DependentUpon>AdminOgretmenListesi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminOgretmenListesi.aspx.designer.cs">
       <DependentUpon>AdminOgretmenListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSil.aspx.cs">
+      <DependentUpon>AdminSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSil.aspx.designer.cs">
+      <DependentUpon>AdminSil.aspx</DependentUpon>
     </Compile>
     <Compile Include="BakiyeYükleme.aspx.cs">
       <DependentUpon>BakiyeYükleme.aspx</DependentUpon>
